@@ -1,0 +1,9 @@
+body {
+    background-color: rgba(54, 54, 54, 0.897)
+}
+
+#flashCardWindow {
+    width: 100%;
+    min-height: 800px;
+    
+}
