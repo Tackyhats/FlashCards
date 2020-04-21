@@ -7,3 +7,37 @@ body {
     min-height: 800px;
     
 }
+
+#flashCardGrid{
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "flashCard"
+                         "buttons";
+    margin: auto;
+    justify-content: center;
+}
+
+#flashCard {
+    grid-area: flashCard;
+    height: 400px;
+    background-color: rgb(163, 46, 46);
+}
+
+#flashCardButtons {
+    grid-area: buttons;
+    height: 50px;
+    background-color: blue;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid white;
+    background-color: teal;
+    border-radius: 3px;
+    min-width: 50px;
+    min-height: 30px;
+    color: black;
+    cursor: pointer;
+
+}
