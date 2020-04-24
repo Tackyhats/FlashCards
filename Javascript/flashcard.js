@@ -3,8 +3,11 @@
 //will actually do further down.  
 let buttons = {
     nextButton: document.getElementById('nextCard'),
-    flipCardButton: document.getElementById('flipCard')
+    flipCardButton: document.getElementById('flipCard'),
+    htmlButton: document.getElementById('htmlButton'),
+    lsButton: document.getElementById('jsButton')
 }
+let ididitgit = "I dun did it git";
 
 //This is a variable created to house what the actual flashcards will be pulled from the same HTML index as the 
 //buttons
@@ -71,7 +74,7 @@ let jsCardPile = {
             new FlashCard("contructor", "A function that initializes an object."),
             new FlashCard("boolean", "A function used to find if an expression is true")
     ],
-    
+
     nextCard: function() {
         if(this.pileIndex >= this.pileArray.length -1) {
             this.pileIndex =0;
