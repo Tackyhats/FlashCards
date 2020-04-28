@@ -5,8 +5,39 @@ let buttons = {
     nextButton: document.getElementById('nextCard'),
     flipCardButton: document.getElementById('flipCard'),
     htmlButton: document.getElementById('htmlButton'),
-    lsButton: document.getElementById('jsButton')
+    htmlButtonOff: document.getElementById('htmlButtonOff'),
+    jsButton: document.getElementById('jsButton'),
+    jsButtonOff: document.getElementById('jsButtonOff'),
+    cssButton: document.getElementById('cssButton'),
+    cssButtonOff: document.getElementById('cssButtonOff'),
+
 }
+
+function toggleButton(buttons, onOrOff) {
+    if(onOrOff) {
+        buttons.style.backgroundColor = "white";
+        buttons.style.color = "black";
+    } else {
+        buttons.style.backgroundColor = "black";
+        buttons.style.color = "white";
+    }
+    
+}
+
+buttons.htmlButton.addEventListener('click', function() {
+    if(buttons.htmlButton.style.color != "black") {
+    toggleButton(buttons.htmlButton, true);
+    toggleButton(buttons.htmlButtonOff, false);
+    }
+});
+
+buttons.htmlButtonOff.addEventListener('click', function() {
+    if(buttons.htmlButtonOff.style.color !="black") {
+        toggleButton(buttons.htmlButtonOff, true);
+        toggleButton(buttons.htmlButton, false);
+    }
+})
+
 let ididitgit = "I dun did it git";
 
 //This is a variable created to house what the actual flashcards will be pulled from the same HTML index as the 
@@ -73,8 +104,15 @@ let jsCardPile = {
             new FlashCard("string", "A data type used for words and requires quotation marks.AKA this."),
             new FlashCard("contructor", "A function that initializes an object."),
             new FlashCard("boolean", "A function used to find if an expression is true")
-    ],
-
+    ]}
+let cssCardPile = {
+    pileIndex: -1, 
+    pileArray: [
+            
+        new FlashCard("Pseudo Class", ""),
+        
+    
+        ],
     nextCard: function() {
         if(this.pileIndex >= this.pileArray.length -1) {
             this.pileIndex =0;
@@ -95,6 +133,7 @@ function flipTheCard(htmlElement, flashCard) {
         htmlElement.innerText = flashCard.frontOfCard;
     }
 }
+
 //Addeventlistener with a argument 'click' adds a new function in js so that on click it performs a new function 
 //that will run the function flipTheCard on our cardDisplay object, with the code from flashCardPile, pileArray, 
 //and the actual array info. The other button moves to the next item in our array. 
@@ -104,3 +143,4 @@ buttons.flipCardButton.addEventListener('click', function() {
 buttons.nextButton.addEventListener('click', function() {
     htmlCardPile.nextCard();
 });
+
