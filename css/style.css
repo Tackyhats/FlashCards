@@ -57,7 +57,7 @@ body {
 .buttons, .blockButtons {
     color: black;
     border: 1px solid white;
-    background-color: teal;
+    
 }
 
 .buttons, .blockButtons, .blockButtonsActive {
@@ -65,6 +65,7 @@ body {
     min-height: 30px;
     border-radius: 3px;
     cursor: pointer;
+    background-color: teal;
 }
 
 .blockButtons {

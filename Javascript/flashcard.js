@@ -38,6 +38,33 @@ buttons.htmlButtonOff.addEventListener('click', function() {
     }
 })
 
+buttons.jsButton.addEventListener('click', function() {
+    if(buttons.jsButton.style.color != "black") {
+        toggleButton(buttons.jsButton, true);
+        toggleButton(buttons.jsButtonOff, false);
+    }
+})
+
+buttons.jsButtonOff.addEventListener('click', function() {
+    if(buttons.jsButtonOff.style.color !="black")
+        toggleButton(buttons.jsButtonOff, true);
+        toggleButton(buttons.jsButton, false);
+})
+
+buttons.cssButton.addEventListener('click', function() {
+    if(buttons.cssButton.style.color != "black") {
+        toggleButton(buttons.cssButton, true);
+        toggleButton(buttons.cssButtonOff, false);
+    }
+})
+
+buttons.cssButtonOff.addEventListener('click', function() {
+    if(buttons.cssButtonOff.style.color !="black")
+        toggleButton(buttons.cssButtonOff, true);
+        toggleButton(buttons.cssButton, false);
+})
+
+
 let ididitgit = "I dun did it git";
 
 //This is a variable created to house what the actual flashcards will be pulled from the same HTML index as the 
